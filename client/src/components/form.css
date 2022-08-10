@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 26rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin: 1rem;
+  background-color: white;
+  box-shadow: 10px 10px 6px rgb(100, 100, 100);
+  color: black;
+}
+
+.container__field {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  height: 20%;
+}
+
+.container__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container__input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container__upload {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+}
+
+.container__button {
+  border-radius: 25px;
+  height: 10%;
+  align-self: center;
+  width: 50%;
+  background-color: rgb(33, 32, 32);
+  font-weight: bold;
+  color: white;
+}

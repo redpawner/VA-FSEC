@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { getCertificates } from './services/api-client';
+import Form from './components/form';
 
 function App() {
   const [certificates, setCertificates] = useState([]);
@@ -41,7 +42,10 @@ function App() {
           ></input>
         </div>
       </header>
-      <main className="app">{mapCerts}</main>
+      <main className="app">
+        {mapCerts}
+        <Form certificates={certificates} setCertificates={setCertificates} />
+      </main>
     </>
   );
 }
