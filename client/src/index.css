@@ -1,4 +1,8 @@
 body {
   margin: 0;
   padding: 2rem 3rem 2rem;
+  background: rgb(22, 22, 23);
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  overflow: scroll;
 }
