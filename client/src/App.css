@@ -19,3 +19,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
 }
+
+@media screen and (max-width: 1250px) {
+  .app {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}
