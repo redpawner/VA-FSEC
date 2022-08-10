@@ -50,3 +50,6 @@
   font-weight: bold;
   color: white;
 }
+.container__status {
+  align-self: center;
+}

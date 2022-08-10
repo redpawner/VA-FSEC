@@ -100,7 +100,7 @@ const Form = ({ certificates, setCertificates }) => {
       <button className="container__button" type="submit">
         Upload
       </button>
-      {status}
+      <div className="container__status">{status}</div>
     </form>
   );
 };
