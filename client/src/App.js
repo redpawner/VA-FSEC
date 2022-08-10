@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { getCertificates } from './services/api-client';
 import Form from './components/form';
+import Certificate from './components/certificate';
 
 function App() {
   const [certificates, setCertificates] = useState([]);
@@ -24,7 +25,14 @@ function App() {
       return cert.artist.includes(artfilter);
     })
     .map((cert) => {
-      return <h1>{cert.artist}</h1>;
+      return (
+        <Certificate
+          key={cert._id}
+          certInfo={cert}
+          certificates={certificates}
+          setCertificates={setCertificates}
+        />
+      );
     });
 
   return (
