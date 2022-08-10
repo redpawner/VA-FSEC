@@ -41,3 +41,18 @@ export const getPic = async (url) => {
       console.log(error);
     });
 };
+
+export const delCertificate = async (id) => {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(id),
+  };
+  return await fetch(baseURL + '/delCert', options)
+    .then((res) => res)
+    .catch((error) => {
+      console.log(error);
+    });
+};

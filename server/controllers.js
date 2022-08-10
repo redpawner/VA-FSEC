@@ -35,4 +35,15 @@ const getPicture = async (req, res) => {
   }
 };
 
-module.exports = { getCerts, postCert, getPicture };
+const delCertificate = async (req, res) => {
+  try {
+    await Certificate.deleteOne({ _id: req.body._id });
+    res.status(200);
+    res.send('deleted');
+  } catch (error) {
+    console.log('error with delCertificate');
+    res.sendStatus(500);
+  }
+};
+
+module.exports = { getCerts, postCert, getPicture, delCertificate };

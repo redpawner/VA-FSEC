@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPic } from '../services/api-client';
+import { getPic, delCertificate } from '../services/api-client';
 import deleteIcon from '../images/icons8-delete.svg';
 import './certificate.css';
 
@@ -12,7 +12,11 @@ const Certificate = ({ certInfo, certificates, setCertificates }) => {
   const [image, setImage] = useState();
 
   const removeCert = () => {
-    return 1;
+    const id = { _id: certInfo._id };
+    delCertificate(id).then((res) => {
+      const newCerts = [...certificates].filter((e) => e !== certInfo);
+      setCertificates(newCerts);
+    });
   };
 
   useEffect(() => {
